@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "src",
+			"path": "C:\\Users\\robotics\\FRCProjects\\HudsonValleyPathwaysAcademy\\src"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.classpath": true,
+			"**/.project": true,
+			"**/.settings": true,
+			"**/.factorypath": true
+		}
+	}
+}
