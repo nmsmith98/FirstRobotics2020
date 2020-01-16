@@ -31,7 +31,6 @@ import frc.robot.subsystems.*;
  * the project.
  */
 public class Robot extends TimedRobot {
-
     Command autonomousCommand;
     SendableChooser<Command> chooser = new SendableChooser<>();
 
