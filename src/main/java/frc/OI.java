@@ -4,9 +4,13 @@ package frc;
 
 import frc.robot.commands.*;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+import com.fasterxml.jackson.core.PrettyPrinter;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.subsystems.*;
 
 
@@ -30,12 +34,27 @@ public class OI {
 
     // Define buttons under Joystick 0
     Button Button1 = new JoystickButton(Stick, 1);
-
+    
     // Define commands
-    Command = new Command();
+    Command Command1 = new Command(){
+        String HahaNo = new String("WPLib sucks");
+        
+        @Override
+        protected boolean isFinished() {
+            return false;
+        }
+    };
+    
+    // Events and all that jazz
+    // Add events, please!
 
+    // Method(s)
+    public void printStuff() {
+        // :)
+        System.out.print("WPLib sucks");
+    }
 
-    // WARNING: CRAPPY TEMPLATE CODE AHEAD !
+    // WARNING: CRAPPY TEMPLATE CODE AHEAD!
 
 
     // There are a few additional built in buttons you can use. Additionally,
