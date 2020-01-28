@@ -20,37 +20,31 @@ import frc.robot.subsystems.*;
  */
 public class OI {
     /* Using temporary variable names while I test things out. 
-     
-    
-    
-    
     
     ...Java is stupid. :) */
 
-
-
-    // Define joystick under port 0
-    Joystick Stick = new Joystick(0);
-
-    // Define buttons under Joystick 0
-    Button Button1 = new JoystickButton(Stick, 1);
     
-    // Define commands
-    Command Command1 = new Command(){
-        String HahaNo = new String("WPLib sucks");
-        
-        @Override
-        protected boolean isFinished() {
-            return false;
-        }
-    };
-    
-    // Events and all that jazz
-    // Add events, please!
-
     // Method(s)
     public void printStuff() {
-        // :)
+        // Define joystick under port 0
+        Joystick Stick = new Joystick(0);
+
+        // Define buttons under Joystick 0
+        Button Button1 = new JoystickButton(Stick, 1);
+
+        // Define commands
+        Command Command1 = new Command(){
+            String HahaNo = new String("WPLib sucks");
+            
+            @Override
+            protected boolean isFinished() {
+                return false;
+            }
+        };
+        
+        // Events and all that jazz
+
+        Button1.whenPressed(Command1);
         System.out.print("WPLib sucks");
     }
 
