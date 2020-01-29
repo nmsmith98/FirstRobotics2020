@@ -21,13 +21,13 @@ public class OI {
     ...Java is stupid. :) */
 
     // Method(s)
-    public interface DefaultMethodInterface {
-        default public void PrintStuff(String InputString) {
-            System.out.print("A MAN HAS FALLEN INTO THE RIVER IN LEGO CITY! START THE RESCUE HELICOPTER! HEY! BUILD THE HELICOPTER AND OFF TO THE RESCUE! PREPARE THE LIFELINE, LOWER THE STRETCHER AND MAKE THE RESCUE! THE NEW EMERGENCY COLLECTION FROM LEGO CITY");
-        }
+
+    public static boolean PrintStuff() {
+        System.out.print("A MAN HAS FALLEN INTO THE RIVER IN LEGO CITY! START THE RESCUE HELICOPTER! HEY! BUILD THE HELICOPTER AND OFF TO THE RESCUE! PREPARE THE LIFELINE, LOWER THE STRETCHER AND MAKE THE RESCUE! THE NEW EMERGENCY COLLECTION FROM LEGO CITY");
+        return true;
     }
-    
-    public void MainMethod() {
+
+    public static void Main() {
         // Define joystick under port 0
         Joystick Stick = new Joystick(0);
 
@@ -35,12 +35,11 @@ public class OI {
         Button Button1 = new JoystickButton(Stick, 1);
         
         // Define commands
-        Command Command1 = new Command(){   
-            PrintStuff(); //USED TO BE COMMENTED OUT DUE TO RUNNING OUT OF TIME AND ALSO IT'S BROKEN
-
+        Command Command1 = new Command(){
             @Override
 
             protected boolean isFinished() {
+                PrintStuff();
                 return false;
             }
         };
