@@ -21,10 +21,12 @@ public class OI {
     ...Java is stupid. :) */
 
     // Method(s)
-    static void PrintStuff(String InputString) {
-        System.out.print(InputString);
+    public interface DefaultMethodInterface {
+        default public void PrintStuff(String InputString) {
+            System.out.print("A MAN HAS FALLEN INTO THE RIVER IN LEGO CITY! START THE RESCUE HELICOPTER! HEY! BUILD THE HELICOPTER AND OFF TO THE RESCUE! PREPARE THE LIFELINE, LOWER THE STRETCHER AND MAKE THE RESCUE! THE NEW EMERGENCY COLLECTION FROM LEGO CITY");
+        }
     }
-
+    
     public void MainMethod() {
         // Define joystick under port 0
         Joystick Stick = new Joystick(0);
@@ -34,7 +36,7 @@ public class OI {
         
         // Define commands
         Command Command1 = new Command(){   
-            // PrintStuff(); COMMENTED OUT DUE TO RUNNING OUT OF TIME AND ALSO IT'S BROKEN
+            PrintStuff(); //USED TO BE COMMENTED OUT DUE TO RUNNING OUT OF TIME AND ALSO IT'S BROKEN
 
             @Override
 
